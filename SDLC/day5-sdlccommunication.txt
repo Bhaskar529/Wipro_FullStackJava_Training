@@ -1,0 +1,174 @@
+SDLC:-
+--------- 
+    stages of sdlc. 
+
+    sdlc models:-
+    ------------- 
+       water fall 
+       agile 
+       spiral 
+       v-model 
+
+    modern development Methodologies:-
+    -----------------------------------
+     tdd 
+     bdd 
+     fdd 
+
+    agile framework:-
+    ----------------- 
+        scrum 
+        kanban 
+
+        scrum framework:-
+        -----------------
+        roles 
+        ceremonies
+        sprint planning 
+        product backlog 
+        sprint backlog 
+        daily standup 
+        sprint review 
+        sprint reterospective 
+
+        kanban 
+        ---------
+          visualization 
+          todo  in progress completed 
+
+         diff kanban vs  scrum 
+
+         lean:-
+         ------ 
+            customer value 
+            reduce waste
+===========================================================================            
+
+Design and developement communication in SDLC:-
+----------------------------------------------- 
+1. joint requirement gathering:- 
+   ------------------------------
+       Design and Development teams collobrates to understand the requirement,
+       review the requirement, ensure that they have shared the understand 
+       of the requirement.
+
+       eg:-
+       ---- 
+         the design and developement regular attends the meetings with 
+         the stack holder, to understand the requirement better. 
+
+
+2. Design presentation to the Development team:-
+------------------------------------------- 
+      the design team presents the wireframe, prototype, flow chart, to the 
+      developement team.
+
+      eg:-
+      ---- 
+         the design team demonstrate intercative prototype, of the functionality
+         how it works, 
+         explain the what the flow of user 
+            
+            enter username & password 
+                 |
+               home  page 
+                  | 
+               click on profile page 
+                  |
+               It will display profile page with image 
+                  |
+                to change profile, click the profile to upload new image 
+
+3. Evaluate the design:-
+-----------------------  
+      the developement Evaluate the design,
+        1.check the feasiblity study, weather it is possible to develope 
+           or not. 
+
+        2. identify the challenges what might come during development.
+
+4. feedback exchange:-
+  -------------------- 
+     after the developement team gives feedback, the design team has to change 
+     design necessary.
+
+5.document alignment:-
+----------------------- 
+  -> the design and developement has maintain the updated documents 
+  -> the document needs be synch, when design team updates, it should 
+     reflect to developement team also. 
+         eg:-
+         ---- 
+            lot of design tools are available. 
+              eg:-
+              --- 
+                 mira board.
+
+===========================================================================
+Effective communication during Testing phase:-
+----------------------------------------------
+1. Test Planning and Preparation:-
+-----------------------------------
+   a. ensure that the testing team understand the project requirement, 
+      what is deadline line, what is the test objections.
+
+   b. conduct a kickoff meeting, 
+         discuss what the approach of testing,
+         roles and responsiblity of the team  
+         create a communicate channel between the team.  
+
+    eg:-
+    ----   
+        the testing team collobrates with the developer team to review the 
+        requirement, and establish the test plan, with the timeline, resource.
+
+2. defect reporting:-
+---------------------- 
+  -> encourage the tester, to report the defects the defects properly in 
+   defect reporting template or any tool. 
+     (raise the issue, in defect template / tool).
+   
+  ->provide the detail information about the issue, with the priority, and 
+  severity. 
+
+=======================================================================
+different types of testing involved:-
+-------------------------------------- 
+  1. unit testing.
+  2. integration testing.
+  3. system testing 
+  4. acceptance testing 
+     ...
+========================================================================   
+Deployment and release:-
+---------------------------
+     release phase:-
+     --------------- 
+            -> packaging (pack all the classes in to one)
+            -> managing the run time dependency.  
+            -> deploy and release into different environment. 
+
+       production server:-
+       ------------------- 
+             when we push the code into production server,then the it 
+             is live for the end user.     
+          
+          difference for project deployment:-
+          ----------------------------------- 
+          development enviroment  (developer push the code,)
+          testing enviroment   (tester test the functionality, to match 
+                                acceptance creteria).
+          production enviroment
+
+
+Post Deployment:-
+-------------------
+1. operate phase. 
+      (It is used by end user)
+
+2.monitor phase:- 
+   here software is monitored. 
+       1.system performance.
+       2.user experience.
+       3.regular backup of data.
+========================================================================       

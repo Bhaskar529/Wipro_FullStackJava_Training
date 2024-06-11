@@ -1,0 +1,398 @@
+Git and Github:-
+-------------------
+
+Git:-
+-----
+  ->Git is a distributed version control system.
+  ->It was developed by Linux Torvalds.  
+  -> It allows multiple develpers to work in project to share the sourec in 
+    github.
+
+  ->It is used to track the files.  
+  ->It is free and open source. 
+
+Repository:-
+-------------
+    A repository can contain source code about the project.
+
+    source code/ project, where we can uplode.
+    It is folder, which contains the source code.
+
+    
+
+    types of Repository:-
+    --------------------- 
+    1. local Repository.
+    2. remote Repository.
+    3. central repository.
+
+eg:-
+-----   
+   scanario 10 developer are working the project. 
+   
+   how they share the code amoung the team...?
+   -------------------------------------------
+  ans:-
+  ----- 
+     use git and github. 
+
+     git --->It is local repository (in the developer system)
+     github -->It is central repository. (It is website,/ cloud system).
+
+local repository:-
+------------------  
+   It is a developer local sytem, where it will track the changes in the 
+   local system.   
+
+remote repository:-
+--------------------
+   the remote repository is a git repository, that is store in some other 
+   developer computer, 
+
+central repository:-
+-------------------- 
+   Github, bigbucket,.... 
+
+===================================================================== 
+download the git:-
+------------------
+  https://www.git-scm.com/download/win 
+
+
+difference between  git and  github:-
+----------------------------------------- 
+git                         github 
+--------------          ---------------------
+1.local repository       1. remote repository
+  eg:-                      eg:-
+ ----                      ------
+   developer machine          cloud machine /website. 
+
+2. software              2. service 
+
+===================================================================
+
+architecture of Git:-
+-------------------------
+
+workspace:-
+------------ 
+  ->It is working directory where our files stored.
+    eg:-
+    ---- 
+       demo1.txt 
+       demo2.txt 
+
+
+staging:-
+--------- 
+     the purpose is to let you to pick files which are going to 
+     be commited and which is not.
+         git add demo1.txt 
+
+local repository:-
+------------------ 
+    after --> git commit 
+       the files locally commited in the local repository. 
+
+remote repository:-
+-------------------  
+    after --> git push, the files will be pushed to remote repository 
+    from the local repository.
+
+======================================================================
+To work with local repository. 
+------------------------------ 
+   download git in the local system. 
+
+To work with Remote Repository:-
+---------------------------------- 
+  create a github.  
+  ----------------- 
+
+  make a note of, 
+      username -> 
+      email ->
+      password ->
+
+=======================================================================
+task:-
+--------- 
+   create a remote repository in github, and push the files to 
+   remote repository from local repository.
+
+
+or create a new repository on the command line
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mytraining1/wiprojavabatch1.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/mytraining1/wiprojavabatch1.git
+git branch -M main
+git push -u origin main   
+
+====================================================================
+configuration of username and password:-
+---------------------------------------- 
+    (connecting git with github) 
+
+git config --global user.name "your-username"
+git config --global user.email "your-email"
+
+
+steps to create a new repository and push it to remote repository:-
+------------------------------------------------------------------
+ git init   --> It initilize a new git repository,
+ git remote add origin url 
+ 
+ git add demo1.txt   
+ git commit -m "first commit"
+ git push origin master
+
+=================================================================
+git add:-
+-------------- 
+    It will moves the files from working directory to staging area, 
+    where the files are commited. 
+
+    3 options:-
+    ----------- 
+    1. git add . 
+           ---> It will add all the files from the directory. 
+
+    2. git add one.txt 
+       git add one.txt two.txt  
+           -> It will add one or more files. 
+
+    3.  git add *.java   -> all the files whose extension is java will be added
+        git add *.html             
+
+========================================================================
+some basic commands:-
+----------------------
+git init 
+git remote add origin url 
+
+
+git add . 
+git commit -m "commit message"
+git push 
+
+
+git status:-
+------------- 
+   by using staus we can able to see the file status, 
+      eg:-
+      ---- 
+         weather it is modified or not. 
+         It is tracked by git or not.
+
+every file in the git will be in the following state:-
+------------------------------------------------------
+1.untracked:-
+--------------  
+   the file which is newly created in the working directory. and the 
+   git not aware of this files. 
+
+2. staged:-
+------------ 
+    the file which are added in the staging area. 
+       git add . 
+    here the files are ready commit 
+
+    Note:-
+    ------ 
+      before commit it need to be added in the staging area.    
+
+3.commited:-
+------------ 
+    Any file which are commited is said to be commited state. 
+       git commit -m "commit message" 
+
+4.Modified:-
+------------- 
+   Any file which are already tracked by git,and again it is 
+   modified in the working directory. 
+
+============================================================
+git reset:-
+------------- 
+    1. staging area to working area 
+           
+           git reset file_name. 
+
+    2. reset the commit to working directory 
+        to see all the commit history 
+           git log   (full data ) --> exit -> x
+         
+           git log --oneline   
+
+==========================================================
+git diff:-
+---------- 
+   -> It shows difference between two commit, 
+   -> It shows the difference between working directory and commited area.
+
+   git diff 
+      (or)
+   git diff hello1.txt    
+
+===========================================================
+
+04c81ad (HEAD -> master) modified data2
+a2217a5 names added
+558eb25 (origin/master) modified data
+5f250af text modified
+a322146 all hello commited
+e8c514e hello1 commit
+faca66d third commit
+8aed401 code modified
+f14428c all the files
+7bd4588 all java files
+4806d16 first commit
+
+   head reference to the last commit. 
+==========================================================
+explain the git commands and its uses with example..?
+----------------------------------------
+explain file stages..?
+
+git init 
+git remote add origin 
+
+git config  for user name and email 
+git status 
+
+git add ( difference ways to add)
+git commit 
+
+git push 
+
+git reset. 
+
+git diff. 
+======================================================
+git clone:-
+------------ 
+     It is used to copy the file from remote repository to local repository.
+
+git fork:-
+----------- 
+   some other github repository we can fork into our github account. 
+
+=======================================================================
+Git Branches:-
+---------------  
+   ->A branch is a new version of the code. 
+   ->All the codes is stored in master/main branch.
+
+   In Large Projects, if we want to add some new feature,
+   we can create a seperate branch for that feature, and 
+   work in that branch and later we can merge with the main branch. 
+
+1. creating and switching to the branch:-
+   -------------------------------------- 
+     git checkout -b bookingfeature    
+
+2. switch to the branch:-
+   ---------------------- 
+      git checkout branch 
+
+3. to see all the branches:-
+   --------------------------- 
+    git branch 
+
+=======================================================
+branch practicle:-
+-------------------
+
+git init  
+    --> index.txt 
+
+    git add .
+    git commit 
+
+git checkout -b branch1 
+     -> login.txt      (make sure you are in the branch 1)
+
+     git add .
+     git commit 
+
+git checkout - b branch2   (creating and switching to a branch)
+      -> register.txt    (make sure you are in the branch 2)
+     git add . 
+     git commit  
+
+git branch 
+     list all the branches
+
+git checkout branchname    (switch to particular branch)
+
+git merge branch1 
+
+git merge branch2 
+
+git branch -d branch1   ( It is used to delete the branch).
+git branch -d branch2   (It is used to delete the branch).
+
+==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+    
+    

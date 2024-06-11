@@ -1,0 +1,92 @@
+linux:-
+--------- 
+
+what is operating system..?
+    It is a inteface between user and computer.
+
+    every electronic device has a os. 
+     laptop --> os (windows, linux, mac)
+     mobile  -->andriod 
+     smart watch -->andriod os. 
+
+     os can manage, 
+        1. resource management. 
+        2. memory management.
+        3. device management.
+        4. file system management.
+        5. networking.
+        6. security and access control.
+
+windows os:-
+------------- 
+    -> It is a GUI based operating system  
+
+    users:-  any one can use , student, employee, manager etc,.....
+    --------
+
+linux os:-
+----------- 
+      ->It is CLI based operating system. 
+         (CLI + GUI). 
+
+     users:-
+     -------- 
+        server system, developer,research, learning,....  
+
+        server --> computer --> (big computer)
+                    -> high configuration 
+                    -> ram 
+                    -> regular data backup    (this work can be automate). 
+
+==========================================================================
+explain unix, linux, ubuntu,....?
+
+unix:-
+------- 
+   -> In 1960 unix operating system was developed at AT&T lab.
+   ->unix is paid software, (At that time only companies where using).
+   ->At that unix was popular , becuase it is CLI based, 
+          CLI advantage:-
+          ------------- 
+                    --> high performance (no need load any graphics)
+                    --> free from virus (no need to intsall anti virus).
+   
+how linux found...?
+-------------------- 
+    -> Linux Torvalds is the Guy who founded linux operating system.
+
+    ->he wanted to use unix, since it is paid software he could not afford 
+     it, and unix is not customizable. so for that reason he developed his 
+     own os and made it open source and even which is customizable.
+    
+Linux:-
+-------- 
+    -> linux is open source os like unix, which is customizable.
+    -> It was founded by Linux Torvalds.  
+    -> Any user can make customize os from linux called as 
+      linux distribution.  
+         
+          some of the linux distribution are, 
+                1.fedora linx 
+                2. redhat 
+                3. kali 
+                4. ubuntu...
+========================================================================                
+difference bewteen unix    vs    linux 
+
+ unix                                linux 
+ ---------------------             ------------------------------
+1. paid                            1.free 
+2. not customizable                2. customizable 
+3. It is can be in                 3. Any one can use, since it is open source
+   server, workstation,
+   data center, 
+    
+4. It is cli based                4. CLI + GUI 
+5.                                 5. distribution, 
+                                             redhat, ubuntu,... 
+
+==========================================================================
+
+
+

@@ -1,0 +1,416 @@
+modern software development:-
+--------------------------------- 
+   tdd, bdd, fdd
+ 
+to improve the quality of the software..?
+-----------------------------------------
+  ->testing again and again.
+  ->the more testing we have to do
+          (the system will become stable and reliable).  
+
+
+TDD:-  (test driven development )
+------  
+    -> software development is a process, where error/(bugs) occurs frequently.
+    
+    -> after developing the software, it needs to be tested before giving 
+        to the end user. 
+          as SDLC stages says  -> 
+                       design ---> coding ---> testing ---> deployment 
+              the coading stage is followed by the testing stage.
+    
+    -> In Traditional Development approaches, error are found after  
+    coading the logic and they only we find the error/bug.  
+
+    to overcome this problem we use tdd:
+    ------------------------------------
+        Test Driven Development(TDD) is a programming style, where we test 
+        first and then we write the code.  
+
+     Note:-
+     ---------- 
+     (TDD Approach)                    (Normal Approach)
+     -------------------            ------------------------
+      ->first write the test case      first do the coading
+      ->then do the coading            then do the testing. 
+-----------------------------------------------------------------
+
+different types of testing..?
+-----------------------------
+unit testing  (developer)
+
+white box testing  (tester)
+black box testing (tester)
+acceptance testing (tester)
+system testing (tester)
+integration testing (tester)....etc
+
+what is the work of developer...?
+-------------------------------------
+  to write the code. based on some requirement. 
+     
+     ticketbooking:- 
+           
+           boolean checkTicketAvailability()
+           {   
+              if(availability>noOfTicket)
+              {
+                return true;
+              }
+
+            return false;
+           }
+    
+     calaculate Add program:-
+     -------------------------- 
+            
+            int add(int a,int b)
+            {
+                 return a+b;
+            } 
+=============================================================== 
+How TDD works..?
+------------------ 
+     -> Test Driven Development starts with writing the test for 
+        each function(or)feature.
+
+    -> Initially the test are failed, because the test are developed 
+      even before the development.
+
+     -> Then write the code , and modify the code to pass the test 
+        case.   
+
+        flow diagram:-
+        --------------- 
+              write the test 
+                 |
+               run the test  ( test will fail)
+                 |
+               write the code (make changes the code until it gets passed)
+                 |
+               run the test 
+                 |
+               test will pass     
+                     
+scanario for testing:-
+------------------------
+  test with valid input.
+  test with invalid input. 
+
+adv of TDD:-
+--------------- 
+     ->less debugging the time.
+     ->less defects  (bugs are reduced).
+     ->It meets the cutsomer requirement.
+     ->It improves the quality of the software. 
+
+framework for TDD:-
+--------------------- 
+  based on programming languages,
+
+  java:-  
+  --------- 
+    junit : it is a unit testing framework for java. 
+
+  .net:-
+  ------- 
+     csunit,Nunit:- there two are popular unit testing for .net projects.
+
+  python:-
+  -------- 
+     pyunit 
+
+========================================================================
+keypoints:-
+----------- 
+   -> tdd is a "inside-out" process  (every function should be tested)
+   -> It is foucs on quality
+======================================================================= 
+
+
+2.BDD:-   (Behaviour driven development).
+--------  
+    BDD is all about collobaration between the teams,
+
+  a.  developement team: (write the code) --> java/python/.net 
+    
+  b.  testing team: (test the software) 
+    
+  c.  business analyst:  collect the requirements from the client
+      (product owner)      give the requirement to developement team.
+
+  d.  product analyst : 
+
+
+  ->  BDD is used for the behaviour of the system, it fouses weather 
+    the software is developed as per the clinet requirement or not.
+
+  ->  BDD uses a common language,to communicate between the teams.
+
+  ->  BDD communicate between, 
+                  1. developer
+                  2. tester 
+                  3. business analyst 
+          they all communicate for the requirement understanding,
+          And aim is the deliver a product as the per the customer needs.
+
+
+The three main principles of BDD are:-
+-------------------------------------- 
+1. foucs on the behaviour or outcomes.
+2. collobaration between the teams 
+3. use a common language for communication and understanding.
+
+ eg:-
+ ---- 
+    
+    1.behaviour of login functionality. 
+          -> enter username 
+          -> enter password 
+               ->when yu click submit button, 
+                  if the given details are correct then it will go to home page
+                  if the given are wrong, then it will stay in same page.
+                    
+    2. behaviour of cart function 
+    3. behaviour of product search function.
+
+-------------------------------------------------------------------
+In BDD the "scripts"  are written in a language called Gherkin.
+Gherkin is easy understand language, which can be understand by 
+developer, tester, business analyst,client,  
+
+Gherkin:-
+--------- 
+   -> It uses simple works like, 
+         "Given","and", "when",  and "Then" pattern.
+
+write a scanario for booking a ticket in movie ticket platform.
+
+scanario: search a movie.
+
+Given my username as sachin
+and   my password as pass 
+and  I enter my username into textfield 
+and I enter my password into textfield 
+and I click the login button 
+
+Then I should navigate to the home page 
+and It should display the banner, with movies currently running
+and It should have search box with empty text 
+
+when I click on search 
+and when we type comedy into search box,
+
+Then I should it display comedy movies.
+----------------------------------------------------------
+
+adv:-
+---- 
+  --> early defects detections.
+  --> team collobraration.
+  --> better requirement understanding.
+
+BDD tools:-
+----------- 
+   -> Cucumber  
+
+task:-
+--------
+  1. write a scanario login 
+  2. write a scanario for booking flight 
+
+=====================================================
+ difference between TDD   vs   BDD:-
+ ---------------------------------- 
+
+ TDD               vs            BDD 
+ -------------                 --------------
+ 1. It is focus on             1. It focus on complete end to end
+   small individual               behaviour i,e) how the functionality is
+   unit                           behaving 
+                                     
+  eg:-
+  -------                                  1.  booking function
+  1. ticket availablity  test             -----> ticket availablity 
+                                          ----> passenger details 
+  2. passenger deatils test               ----> payment should be done 
+                                          ---> notification
+  3. payment test   
+
+
+
+2. team :-                                 2. team :-
+      only developer is involed             stack holder
+                                            business analyst.
+                                            developer. 
+                                            tester.
+
+
+3.language:                                3.language
+     It is written some                       It is written in common 
+     programming                              language, any one can understand.
+
+
+===========================================================================
+
+3.FDD:-
+------- 
+    Features Driven Development.
+   
+    ->It is a itertative incremental software developement methology.
+   
+    ->In FDD, the software product is developed feature by feature in an 
+      incremental approach.
+
+    ->focuses on developing the working software with the feature that 
+      satisfy the client needs.  
+
+
+ eg:-
+ ----- 
+    ecommerce application:-
+    ------------------------- 
+        feature:-
+        ---------
+        1. user register & login. 
+        2. profile mgmt feature. 
+        3. address mgmt feature. 
+        4. product listing feature.
+        5. cart feature 
+        6. order feature 
+
+ecommerce feature list:-
+------------------------ 
+    -> login
+    ->placing the order
+    -> cancel the order 
+    -> product search 
+    -> product filter 
+    ->rewards 
+    -> catalog 
+    -> order tracking 
+    -> refund
+    -> address 
+    -> excahnge 
+    -> chat bot 
+    -> payment 
+    -> card details 
+    -> support service,
+========================================================================
+TDD ---> will one small unit  
+BDD ---> will check behaviour of any functionality 
+FDD ---> develope the over all function. 
+-------------------------------------------------------------------
+Flow of FDD:-
+---------------
+             Develope Overall model 
+                  |
+             Build the feature list 
+                  |   
+              plan by feature 
+                  |
+              design the feature 
+                   |        
+               build the feature    
+
+  flow diagram of FDD with example:-
+  ----------------------------------- 
+
+
+         1. Develope Overall model  
+                  |            [step 1]  --> over all requiremnt
+                  |              -> define the objective of the system.
+                  |              -> gather all the client requirement.
+                  |               -> customer can able to register and login 
+                  |                    search the product,filter the product,
+                  |                    place the order,order cancel,.....
+                  |
+           2. Build the feature list 
+                  |               [step 2] --> build the feature list from 
+                  |                            the requirement.
+                  |                  
+                  |                feature list: 
+                  |                         login,signup,reset password,
+                  |                         profile,social media logic,
+                  |                         search, filter,cart, order, payment,
+                  |
+            3.  plan by feature   [step 3]
+                  |                      profile feature development
+                  |                         -> assign the team 
+                  |                         -> duration of the feature
+            4.  design the feature 
+                   |                [step 4]    
+                   |                      ->before staring the implementation 
+                   |                        create a design specification  
+                   |                       HLD & LLD
+                   |                       
+             5.  build the feature   [step 5]  
+                                 ->develope the feature based on design 
+                                   specification  
+                                 -> coading and testing happens here.
+                                 -> feature integration.
+           
+             6. test  the feature 
+
+             7. review the feature.
+========================================================================                             
+
+Scrum methology:-
+------------------ 
+ 1. scrum appraoch divides the software developement into small 
+   chunks which is called sprint.
+
+ 2.Each sprint delivers a working piece of software.
+ 
+ 3. It has multiple roles 
+       a. product onwer 
+       b. scrum master 
+       c. developement team (developer & tester) 
+
+ 4. After every sprint the client can review the product and give the 
+   feedback. 
+
+ 5. documents used in scrum:- 
+       product backlog 
+       sprint backlog 
+         (or) else we can use some tools. jira, trello,...
+
+
+what is sprint...?
+         -> Entire time frame is broken down into smaller delivery window.
+         -> Each sprint delivers a working software feature.
+            (or)
+           It is duration time 2 to 4/5 weeks,--> after this sprint 
+           release product 
+
+what is product backlog..?
+        -> product owner, interacts with the customer and identify 
+          the functionality what needs to be developed. 
+
+        ->product owner prioritize the functionality, which needs to 
+          be developed first , --> high,medium,low..
+        -> list of items , which be prioritize
+
+what is sprint backlog..?
+          -> It is sub-set of iteams, which needs to delivered in the particular 
+            sprint.
+
+what is sprint planning..?
+         ->In spring planning, the team go through the product backlog items
+          and decides what item needs to be developed in particular, 
+
+         ->spring planning before the start of sprint.      
+
+what is daily stand..?
+
+
+
+what is spring review...?
+
+
+
+what is spring reterospective..?
+
+
+======================================================================
+

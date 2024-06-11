@@ -1,0 +1,311 @@
+why we need linux..?
+-------------------- 
+-> It is open source and customizable. 
+-> It is secure and high performance.
+
+what is linux..?
+----------------
+     ->linux is a unix like operating system,which is open source.
+     ->It is capabale in handling multiple user. It is founded by 
+       Linux torvald. 
+     ->It is can be customizable.
+
+what is kernel:-
+---------------- 
+   [It is the heart of the OS]
+
+   ->It is a computer program, that allocates the system resource.
+   and it will co-ordinate all the details of the computer internal 
+   is called kernel/os.   
+
+         Application 
+            |
+          kernel  
+     ------------------    
+    |       |          |  
+  cpu    memory      device     
+                    
+  -> kernel can interact with cpu, memory,device,.....
+  -> user communicate with the os through a program called shell. 
+
+java --> devlope application  
+             (desktop / web application)   
+
+sql  --> interact with database software 
+
+html & css  --> build the webpage. 
+shell program  --> we can interact with os. 
+=============================================================
+what is shell programming..?
+    ->It is used to interact with the os, by executing the commands.  
+        -> copy, move, make directory, remove directory 
+            cp 
+            mv 
+            ls 
+            pwd 
+            cd 
+            cat 
+            touch 
+            cal 
+            head 
+            tail 
+            ..............  
+
+     -> Every commands will do some task.  
+
+     why we use shell programming..?
+     --------------------------------
+         -> By using shell programming , we can automate the repetative task.
+         and we can write the script for complex task.
+            eg:-
+            ---- 
+              -> daily system backup.
+              -> database backup 
+              -> automatic mail sender 
+==========================================================================
+file permission:-
+------------------
+    
+    ls -l 
+
+    d rwx rwx  rwx  desktop 
+    d rwx rwx  rw-  downloads
+
+    r-> read 
+    w-> write 
+    x-> read+write 
+
+     permissions:-
+     ---------------
+
+     0  = 0      => nothing 
+     1  = 1      => execute 
+     2  = 2      => write  
+     3  =2+1     => write + execute
+     4  =4       => read 
+     5  =4+1     => read + execture 
+     6  =4+2     =>read + write 
+     7  =4+2+1    => read + write + execute
+            
+              rwx
+       000    ---
+       001    --x
+       010    -w-
+       011    -wx 
+       100    r--
+       101    r-x
+       110    rw-
+       111    rwx
+
+--------------------------------------------------------------------
+difference bewteen  CLI vs GUI.  
+   CLI              vs          GUI 
+   -------------         -------------- 
+->console representation      Graphical representation 
+-> faster                     compare to GUI, It is slower. 
+
+====================================================================
+what is CLI..?
+---------------- 
+   -> It is a text based interface,  with the help of commands interact
+   with software and os. 
+      adv:-
+      ---- 
+         less memory consumption 
+         high performance
+
+======================================================================
+what is shell..?
+----------------- 
+   -> It is a command line interpreter.
+   
+   -> It translate the commands entered by the user and converts 
+   them in to a language that is understand by the kernel. 
+
+     eg:-
+     ----- 
+        take input    =>    translate the    => language understand
+         from user            commands           by kernel.
+====================================================================== 
+different types of shell:-
+----------------------------
+                   sh
+  1. bourne again shell  bash
+  2. c shell 
+  3. korn shell 
+  .....
+======================================================================
+practice:-
+-----------------
+  hello world program:-
+  ---------------------- 
+  
+  nano helloworld.sh      (editor)
+  ---------------------
+     #!/bin/sh      --> shell 
+     #!/bin/bash    ---> 
+
+    echo "hello world"  
+
+  to give the permission:-
+  ------------------------ 
+      chmod 777  helloworld.sh  
+
+  to run:-
+  --------- 
+     ./helloworld.sh 
+
+ ==============================================================      
+variable:-
+----------- 
+  -> It is used to store a value. 
+    eg:-
+    ---- 
+        name="rahul"
+        age=20  
+
+        to call the variable we have to use $name ,$age 
+    
+    eg:-
+    ----- 
+          echo "your name is $name and age is $age"
+
+uset variable:-
+---------------
+    It is used to delete the variable values. 
+
+readonly variable:-
+------------------- 
+   -> Once we declare the value, later it cannot be modified. 
+
+
+rules:-
+-------- 
+  -> use equal sign (=) to assign a value to the variable. 
+      eg:-
+      ---- 
+         a=10   (correct)
+         a = 10   (incorrect )
+  
+  -> variable names are case sensitive   
+  -> to call the variable use dollar ($) symbol.   
+        echo $a
+
+===============================================================
+every program should starts with (#!) sheBang , then it should be 
+followed by path of the shall program 
+    #!/bin/bash 
+    #!/bin/sh 
+====================================================================
+
+user input:-
+------------ 
+   read -> read command is used to take user input.
+
+   read -p  -> read with prompt message. 
+
+=================================================
+operators:-      $(( expression ))
+------------- 
+ arithmetic  + , - ,....
+ relational  -ge , -le , -gt , -lt ,.....
+             >= , <= ,> , <  
+ logical  & | ! 
+
+ file operator: 
+           -e  It check weather the file exists or not 
+           -r  check for read permission
+           -w  check for  write permission
+           -x  check for execute permission
+           -d  checks for directory exists or not.
+
+=====================================================
+task:-
+------ 
+   take two number from user and perform multiplication.
+
+=======================================================
+if statement :-
+------------------ 
+    if [[ condtion ]]
+    then 
+        #do something 
+    fi                    ---> end of if stmt 
+
+     
+if else stmt:-
+----------------
+    if [[ condition ]]
+    then 
+      #do something 
+    else 
+       # do some thing 
+    fi             
+
+=============================================
+
+#!/bin/bash  ---> better syntax
+#!/bin/sh    -->
+
+bash and sh are two different shells of the Unix operating system. 
+bash is sh, but with more features and better syntax. 
+Bash is “Bourne Again SHell”, and is an improvement of the sh 
+(original Bourne shell). Shell scripting is scripting in any shell,
+ whereas Bash scripting is scripting specifically for Bash. 
+ sh is a shell command-line interpreter of Unix/Unix-like operating systems. 
+ sh provides some built-in commands. bash is a superset of sh. Shell is a
+  command-line interface to run commands and shell scripts. Shells come 
+  in a variety of flavors, much as operating systems come in a variety of 
+  flavors. So, Shell is an interface between the user and the operating 
+  system, which helps the user to interact with the device.
+
+=====================================================================
+loops:-
+----------- 
+   -> to do the repetative task.,
+      for loop
+      while loop
+      until loop  --> to print sequence.
+
+
+===================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

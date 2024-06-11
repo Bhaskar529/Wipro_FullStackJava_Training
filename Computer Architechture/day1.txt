@@ -1,0 +1,588 @@
+computer architecture & basic networking.
+------------------------------------------
+
+Evolution programming language:-
+--------------------------------
+
+language:-
+-----------
+   communication.
+
+programming language:-
+------------------------
+   communication with the system/computer.
+
+   how many programming are there..? 
+      n number ( no exact number) 
+
+ list some of the popular programming languages..?  
+  
+  c, c++, java, python, ruby, kotlin,.net,php,swift,....
+  html, css , js, react js,....
+  sql, no sql,
+
+Evolution of programming language:-
+--------------------------------------
+1.Machine language.
+--------------------
+    -> It has only 0's and 1's 
+
+         2   +    2     = 4     (high level)
+       0101 0001  0101  =  1010   (machine level) [difficult understand by human]
+
+
+2.Assembly level language:-
+--------------------------
+   -> here phenomics and symbols are introduced.
+
+   2   +   2    = 4 
+  
+   2  add 2     = 4   
+   2  sub  2    = 0
+      
+      Here Assembler is used to convert assembly level language to 
+      machine language. 
+            
+            2  ---> assembelr --> 0101.
+            add ---> assembler --> 0001.
+           (converts assembly level language to machine level language)
+
+
+3.High level language:-
+----------------------- 
+    -> the language which is understand by computer and human. 
+  
+   c,cobol, fortan,... 
+
+    ->c is the mother for all other programming language.
+      because in C language first introduced about, 
+            1. condition stmt 
+            2. looping stmt 
+            3. break stmt 
+            4. continue stmt.
+
+    ->later C is termed as middle level language.
+
+    ->because C has both high level and low level feature.
+      
+       high level feature:-  condition stmt, looping stmt,...
+       low level feature :-pointer 
+
+
+4. oops (object oriented programming language):-
+------------------------------------------------
+  ->by using oops, we can able to solve the real world problems.
+       (or)
+  ->by using oops, we can create the software based on real world objects.
+       (or)
+       solve day to day life problem. 
+
+   why we develope software..?
+   --------------------------- 
+      to make the work easy, 
+        (or)
+      to make the work automate.  
+
+         eg:-
+         ---- 
+           ola :- cab booking service. 
+           zomato: - food delivery service,...    
+
+     15 year back:-
+     ---------------- 
+        if we want to order a food. 
+
+      problem stmt for food delivery.
+      --------------------------------
+         1.go the near by restraunt   
+         2.choose the menu 
+         3. place the order 
+         4. pay for the order 
+         5. collect the order. 
+
+         (zomota/swiggy has solved the above problem).
+
+
+5.data science/machine learning/AI:-
+-------------------------------------
+==========================================================================
+software:-
+-----------
+   ->set of instructions performs to do some task.
+
+   different types of software application.
+     
+       1.desktop application.
+       2. web application. 
+       3. mobile application.
+
+desktop applications:-
+----------------------
+     ->which is installed on the computer. 
+        eg:-
+        ----
+            notepad, chrome broswer, ms teams, ms office, 
+
+       drawbacks:-
+       -----------
+         ->we have to take care about maintanance. 
+            if we want to change os (uninstall and install).
+
+         -> we have to provide the storage. ( disk space)    
+         -> we cannot access it remotely.
+
+web applications:-
+-------------------
+      ->we can access it remotely from any device.
+
+      eg:-
+      ---- 
+         gmail 
+         socail apps...etc 
+
+     2 types of web applications:-
+     -----------------------------
+     1.static web application.
+     2.dynamic web application.   
+
+      static web application:-
+      ------------------------ 
+       -> the content is same to all the users. 
+          ->wikipedia.
+          ->any about us page.
+          -> any blog 
+
+      dynamic web application:-
+      -------------------------
+        content is display based on the user login.
+
+        eg:-
+        ----
+           facebook --> profile page based on login
+           flipkart 
+           .......    
+
+      mobile:-
+      ------- 
+         -> because of its more pupularity and easy held devices.
+         -> irctc web app -->irctc mobile app 
+                  urban clap 
+                  google map,
+
+==================================================================
+what is computer..?
+-------------------
+     It is an electronic device, which is used to performs various task. 
+        eg:-
+        --- 
+           ->any calculation 
+           -> file creation, reading, writing, copying,..etc.
+       
+       Note:-
+       ------ 
+         -> every one is using computer.to perform task. 
+
+  component of computer:-
+  ---------------------- 
+        ->input device ( mouse, keyboard,camera,..)
+        -> output devivces ( speaker, monitor, printer,..)
+        ->cpu   (heart of the computer)
+        ->memory (storage -> ram , rom,...)
+
+
+what is cpu...? how it execture the instruction:-
+--------------------------------------------------
+ ->central processing unit 
+      -> which takes input, 
+      -> perform the calulations, 
+             (Arithmetic and logical operation)
+
+      ->gives the result to the output devices.     
+
+
+input device:-
+---------------- 
+  -> It used takes the input.
+
+control unit:-
+--------------- 
+   -> control the instructions, and decides, for what input 
+   what is the ouptut.
+
+   -> It is used to process the exceution of instruction, and decides 
+   form this input, what is the output.
+         
+
+ALU:-
+------- 
+    It using the perform arithmetic & logical calclation. 
+
+memory:-
+-------- 
+    It is used to store the result. 
+
+
+output devices:-
+---------------- 
+   display the result.
+
+=======================================================
+how cpu execute the instruction..?
+----------------------------------
+fetch. 
+decode. 
+execute. 
+store.
+
+1.fetch:-
+---------- 
+   It is used to fetch the next instruction from RAM.
+
+2.decode:-
+---------- 
+    ->the coutrol unit, decode the instructions, 
+    ->It decides which operation to perfomed. (which input and what output).
+
+3.execute:-
+------------- 
+    ->It is used to execute the instructions,  
+       perform some like, arithmetic and logical unit.
+
+4.store:-
+------------ 
+      after performing the operation, it needs to store the result in memory(RAM).
+
+============================================================================
+memory:-
+-------- 
+   ->it is used for storing the data. 
+     (we store the data in the memory, and later we can access the data)
+
+
+memory hierachy:-
+--------------------- 
+ 
+ -> level 0   -- cpu register 
+ -> level 1   --- cache memory (ram)
+ -> level 2   --- main memory  (ram)
+ -> level 3   --- magnetic disk 
+ -> level 4   --- optical disk.
+                  magnetic tap.
+
+
+
+cpu register:-
+------------- 
+    -> It is a small high speed memeory located inside the cpu.
+    -> It is used to store the result any instruction which are frequently accessed.
+
+    -> It has fastest access time and it has less storage.
+
+
+cache memory:-
+-------------
+     -> It is the smallest memory located inside the cpu.
+     -> recently executed instruction are stored in the cache.
+     -> It improves the performs to the because, if same instruction executed again 
+        then it will take from the cache memory.
+
+
+RAM (Random Access Memory) - Main memory:-
+------------------------------------------- 
+   ->It is temporay storage. 
+   ->It performs various calculations.     
+
+
+Hard disk:-
+----------- 
+  -> It stored data in gb & Tb, every computer has its harddisk,
+  -> They are secondary storage.
+
+Magnetic tape:-
+--------------- 
+   -> It is recording device.
+   -> It is mainly used for data backup.
+==================================================================
+what is parallel processing...?
+--------------------------------- 
+  ->two are more task executed simultaneously.
+   
+    ms teams  -- meeting 
+    vs code   -- type 
+    ...multiple apps 
+
+  ->Any computer which has more than one CPU can perform parallel processing. 
+  ->muti-core processor in today laptop where found which has multiple cpu. 
+      dual core , mutlti core , i3 ,i5, i7,...
+
+  adv:-
+  ----- 
+    in parallel process it will reduce the amount of time to execute. 
+
+
+eg:-
+---- 
+    task 1 ==> eating  (10 mts)
+    task 2 ==> talking  (5 mts)
+
+ concurrency:-             vs            paralleism:-  
+ -------------------              ----------------------
+-It has one cpu                       It has multiple cups
+
+-It will do one task                  multiple task can be done at same time
+ at a time.
+
+- t1--->                              t1---- t2
+       t2 -->                        (cpu1)  (cpu2)
+            t3-->
+==========================================================================
+
+eg:-
+----
+  for larger system (online banking system) 
+     --> It is parallel processing 
+            -> loan approval 
+            -> transaction 
+            -> accout mgmt  
+            
+==========================================================================
+Networking:-
+------------ 
+  connection.    
+
+what is Internet...?
+-------------------
+     Interconnected devices
+
+what is www..?
+---------------
+   ->World Wide web.
+   ->It is a information system, which enable the content to share to the end user, globally.
+
+   -> if we host any content in www network, it will be accessed globally.
+
+commputer network:-
+------------------- 
+   It is a connection of devices.
+
+types of network:-
+------------------- 
+  LAN:
+  MAN: 
+  WAN:
+  PAN:
+
+
+lan:-
+---- 
+   --> with in some small distance, we use the lan 
+   --> offices, home.
+   --> same buidling    
+
+man:-  (meteropolitian area netwrok)
+------
+   -> with the city range. 
+
+WAN:-
+-----  
+   -> with the countries range. 
+   -> for large distance. -> It covers the geographical distance.
+
+Pan:-
+------
+   -> It is the small distance,eg:- hotspot, 
+   -> using hotspot with in the short distance, we can able to connect the device.
+
+Vpn:-
+----- 
+    ->Virtual private network,
+    -> It povides secure connection to the remote user.
+
+=============================================================================
+Protocol:-
+----------
+   rules of communication.
+
+types of protocol:-
+------------------- 
+   ip 
+   tcp
+   http 
+   https 
+   ftp 
+   smtp 
+   ssh 
+      
+ip:-
+---- 
+  -> It is a internet protocol,
+  ->It is used send data from one computer to another computer.
+  -> It is responsible to send data packets and routing.    
+                    
+     computer a   192.67.67.2
+     computer b   168.50.23.6
+                 (ip address).
+
+tcp:-
+------
+ -> transmission control protocol.
+ ->by using tcp we can send the data packets, and provide secure and reliable connection.
+
+ Http:-
+ ------ 
+   -transfer the web pages. 
+
+ https:-
+ ------- 
+    ->It is the extension of http, provides the secure connection with the network.
+    -> data encryption, It uses digital signature.
+
+Ftp:-
+----- 
+   It is used to transfer the files, with in the network.
+
+smtp:-
+----- 
+    -> simple mail transfer protocol.
+    -> It is used to send the email.
+======================================================================
+How the data is transferred between the network. 
+
+OSI network model.
+-------------------
+1.software
+  Application layer  -> user interacts, email app,
+  presentation  --> data compression, and encryption, reduce the data size
+  session layer  --> It establish the connection
+ 
+  Transport layer --> Data is getting transmitted using tcp,
+
+2.hardware 
+  network layer --> routing information, which the data packects to be transferred.
+  data link layer --> how to packets are transmitted, (packet info)
+  physical layer  --> transmit the data using binary (0's and 1's) singles, 
+                     It has cables as a medium
+
+======================================================================
+basic network terminology:-
+----------------------------  
+node :
+ip address :
+firewall: 
+router: 
+DNS:
+switch :
+
+
+node:-
+------ 
+   It is a device, which is connected to the network,
+    eg:-
+    ---- 
+     laptop 
+     table 
+     printer 
+
+ip address:-
+------------ 
+   ->It is a unique number which assigned to a device with the network.
+   -> with the help ip address, it will identify the device details,device location
+
+firewall:-  It monitor the request, by using firewall we can block some sites.
+----------
+
+router:-
+---------
+  -> It is used to connect multiple devides with the network.
+
+DNS:- Domain name system. 
+----- 
+      It will translate the domain name into ip address. 
+          flipkart.com   ---- 192.187.34.56 
+          google.com     ---- 123.45.65.34.
+
+switch:-  It connects the devices with the network. 
+--------      
+      eg:-
+      ---- 
+         printer.
+         multiple computer can connect to a switch 
+
+assignment 1:-
+-----------------
+  write the network terminologies with example
+         
+===============================================================================    
+network topology:-
+----------------- 
+    ->It defines how the nodes are connected in a network.
+
+    different types of topology:-
+    -----------------------------
+   1. bus topology.
+
+
+
+
+
+1.bus topology:-
+---------------- 
+     It uses single cable to connect all the devices.
+
+     adv:-
+     ----- 
+        low cost (because single cable is enough to transfer the data).
+        
+     dis:-
+     -----
+       if the cable fails, then the whole system will not work. 
+       if some node transfer the data, then the other node should wait.  
+
+
+2. star topology:-
+-------------------
+    -> Here it has central hub. 
+    -> all the data transmission happens in through hub.
+
+   dis:-
+   -----
+      if hub fails, then all the system will fail.
+
+
+3.ring topoloy:-
+----------------- 
+    every node is connected to exactly two devices which forms a ring.
+
+    dis:-
+    ----- 
+     -> data has to travel in uni-directional way, until it reaches destination.
+     -> if one system fails then all other system will not receive data.
+
+
+4.mesh topology:-
+-------------------
+     ->every device is connected to the other device.
+     -> It creates multiple path 
+          
+          5 devices      7 devices
+         -----------     ----------
+         n(n-1)/2        7 (6)/2
+         5 (4)/2          42/2
+         10 cables         21 cables
+
+5. tree topoloy:-
+----------------  
+    -> It forms parent child nodes,
+    -> It forms hierarchial with different level  (parent, child, grand child) 
+    -> It is combination of star and bus topology. 
+    -> It has multiple hub ,and one root.
+
+    note:-
+    -----  
+      if one hub fails, other hub will work, if root fails then the whole system fails.
+
+
+================================================================================
+Assignment 2: Draw your Home Network Topology and explain how you are accessing the RPS Lab environment.
+
+Assignment 3: Identify a real-world application for both parallel computing and networked systems. Explain how these technologies are used and why they are important in that context.

@@ -1,0 +1,346 @@
+what is Agile..?
+----------------- 
+    -> It is a iterative incremental software developement model,
+    where the product the features is developed in sprints, at the 
+    end of the spirnt the customer can review the feature and give 
+    the feedback for any improvement.
+
+Agile planning techniques:-
+------------------------------
+   focus on,
+      ->product backlog,
+      ->story point estimation        
+
+   steps:-
+   -------
+    1.schedule regular backlog grooming session.  
+          ( regular update the backlog sheet every 2 weeks).
+
+    2.assemble the right team:-
+                    invite stackholder,product owner, manager, developer,
+               tester,  every should be aware of individual contribution.
+   
+    3. review the current backlog:- 
+              review the current backlog, identify the completed items,
+           itentify the work in progress,  and new items needs to start.
+    
+    4.prioritize backlog items:-
+            prioritize the remaining the items form the backlog, on the 
+            business needs and market the item needs to prioritize.
+              eg:-
+              ---- 
+                 which work needs to complete first.
+
+    5.break down large task:- 
+                in the product backlog if any item is large, then break 
+                down into small managable task.
+    
+    6.define the acceptance criteria:- 
+           ->ensure each item in the backlog has clear acceptance criteria.
+           -> this helps to prevent misunderstanding, and ensure every one 
+           aware what needs to done, based on customer requirement.
+                 
+    7.estimation of task:-
+             -->specify the time required to complete the task.
+            --> this helps to the sprint duration.
+
+    8. identify the project dependency:-
+             identify any 3 party api integration is needed.
+                eg:-
+               -> like payment gateway.
+               -> google map integration.
+====================================================================
+spring planning:-
+------------------
+   [before the sprint start , there is a spring planning meeting will be there]
+    
+    in spring planning meeting, 
+        product onwer,scrum master, manager, developer, tester, all are involved
+        in sprint planning meeting.
+
+  1. set the goal.
+  2. review the backlog items 
+  3. select the user stories.
+  4. breakdown the user stories.
+  5. estimate the task.
+  6. create the sprint backlog.
+  7. commit the work. (what needs to complete in the sprint)
+
+example of spring planning..?
+-----------------------------
+step1:- the scrum master start the planning metting, and outline the goal
+        to deliver login feature of the application.
+
+step2: the product owner describe the user stories, related to the login 
+       feature.   
+              such as how the login should work, 
+                    user authentication,
+                    password reset, 
+                    social media login (facebook,gmail)
+
+step3:- the team agress on the goal, to develope login feature, 
+      with in 3 weeks.
+
+step4: the team to collobrates to select the user stories, from the product 
+      backlog.   
+
+step5:the team divides the work into, 
+               frontend developement
+               backend developement,
+                testing,
+
+step6:the task are estimated, 
+             frontend -> 10 hour 
+             backend -> 25 hour 
+             testing -> 8 hour.
+
+step7: the team creates the sprint backlog, with all the task need to complete 
+       for login feature.
+
+step8: done creteria for coading, testing. 
+            (what types testing)
+            (what scocial media,should work)
+
+step9:finalize the sprint goals, what needs to devliver for login feature  
+
+======================================================================
+Roles:-
+--------- 
+1.Product Onwer
+2.Scrum master 
+3.the team (cross functional team) developer,tester,..
+
+
+Product Owner:-  
+---------------  
+         It represents the customer interest and prioritize the 
+         requirement in the backlog. 
+         
+         core responsiblity:- communication  (any doubt on requirement,
+                                             the team clarifies with 
+                                             product onwer)
+
+Scrum master:-
+---------------
+          ->facilitates the scrum team.
+          -> motivate the team to follow agile practices.
+           
+           core responsiblity: facilitates the team
+The team:-
+------------
+           -> It is a group by people, like developers, tester
+            who works on sprint goal.
+
+          core responsiblity: develope the valuable product.             
+
+=========================================================================
+How to conduct a effective daily stand up meeting..?
+---------------------------------------------------
+1.set the time and place. 
+            ->schedule a fixed time and location for the standup meeting,
+            ->preferably at the start of the day,ensure that every one can attend.
+                eg:-
+                ---  
+                   9:00 am every day 
+
+2.start on time:  start the metting on time, keep in mind what 
+                  is the purpose of the meeting.
+
+3.stand up: encuorage the team member during the meeting, to keep status
+            it short and focused. 
+              every should give chance to speak.
+        
+4.Each memeber should provide the updates: 
+                  a. what did i do yestarday..?
+                  b. what will i do today..? 
+                  c. is anything blocking my progress..?
+
+          eg:-
+          -----
+           sachin : yestarday i completed the 5 test case login feature, 
+                    today i will work rest password test   
+                    no blocking.                             
+            
+           rahul: yestarday worked on payment module,  
+                  today i will on upi paymnet. 
+                  issue in payment, not showing in transaction history. 
+
+5. the dissussion should be on the current task.and identify if any 
+   team memeber is facing the issue.
+
+6.The team should come forward to resolve the issue. 
+      eg:-
+      ---- 
+         since rahul has issue, sachin came forward and tells he will 
+         look into the issue.
+
+7.follow the start and end time meeting: 
+     don't extends the meeting. 
+        9.00 am - 9.20 am
+          end the meeting at 9.20 am, 
+
+Note:-
+--------- 
+   the stand up meeting happens daily. 
+
+=======================================================================   
+Importance of Sprint Review:-
+------------------------------
+   ->Sprint reviews play a vital role in agile development, because it 
+   provides opportunity for the team to showcase the work what has been 
+   completed to the stackholder, and get the feedback.
+      
+      key points:-
+      ------------ 
+        1. showcase the completed work.
+        2. collect the feedback 
+        3. validate the requirement. -> sprint reviews helps to validate the 
+                                      product, weather the product developed 
+                                      as per the customer reuqirement.
+        
+        4.Transpranceny and colloboration. 
+                              the team openly collobrates with the stackholder.
+
+        5.Improve the product quality. 
+                 feedback collected during the spring review, helps to identify 
+                 the issue at the early stage of developement, which leads 
+                 improve the quality of the software.                      
+
+========================================================================
+
+Kanban Framework:-
+------------------
+   ->It is one of the agile framework.
+   ->It provides the work completed in visualization format.
+
+history:-
+---------- 
+     toyata--> 
+        car manufacturing 
+
+        to manufacture a car, It needs the items in the warehouse, 
+
+    warehouse:-
+    ------------ 
+         It has the material stock, -->some times the warehouse contains 
+         the stock which might not be useful in car manufacture, this leads 
+         to waste material.    
+
+ 
+ -> kanban borad spilts the task in visualization column.  
+       
+        todo                      in progress              completed
+      ----------------           -------------------        ---------------
+       ->get the requirement     finalize the requirement   requirement completed
+       -> order the raw material   yet to receive       
+       -> manufacture the car 
+
+
+   kanban board for chef to prepare food:-
+   ---------------------------------------
+
+   todo                       in progress                     completed
+   --------                  ----------------                -------------
+                         base   backing  toping  
+ order 1 pizza           baseready backing  toping completed      completed
+ order 2 pizza           base   backing    
+ order 3 pizza           base   backing
+ order 4 pizza           base
+ order 5 pizza
+
+  ecommece 
+
+  todo                   progress                             completed
+  -------------        ------------------------------         ------------
+                      plan  design   coading   testing deploy
+ 
+register              plan  design   coading    testing deploy     completed
+login                 plan  design   coading    testing deploy     completed
+product               plan  design   coading    testing deploy     completed
+cart                  plan  design   coading    
+filter                plan  design   coading    
+search                plan  design
+payment               plan
+catalog               plan
+review                
+
+=================================================================
+
+Kanban Rules:-
+---------------
+   1.visualization of the work. 
+   2.Linit the work in progress.
+   3.maintain the flow 
+
+=================================================================
+
+difference between kanban  and scrum:-
+---------------------------------------------
+   Kanban               vs                     Scrum 
+   ---------------                 ---------------------- 
+  work is visualised on           work is organised in fixed sprint
+  kanban board     
+
+  no fixed time frame            planning occurs at the start of the 
+  for planning                   sprint, with scope and duration.
+
+  No fixed backlog, work          It has a product backlog, with 
+  items are pulled from todo      items are prioritize.
+  list.
+
+  In Kanaban the meetings          It has regular meets,sprint planning
+  are rare, only if required       daily stand up, spring review,..
+  then they will conduct.
+
+  No specific roles,                roles, product onwer, scrum master,
+                                    devlopment team.
+
+
+=======================================================================
+How to choose between scrum and kanban...?
+
+
+Scrum:-
+-------- 
+   1. stable team 
+   2. fixed-length iteration.
+   3. specific roles and ceremonies are valued.
+
+kanban:-
+---------
+   1.work is continuous.
+   2. flexibility in roles and process is cruical. 
+   3. no fixed iterations.
+
+================================================================
+  draw a kanban board for your case study.
+
+===============================================================
+Lean:-
+-------  
+   -> It provides a guidline to reduce waste.
+   -> It is is implemented in different industries, 
+           -> manufacturing industries
+           -> project mgmt industries. 
+
+    lean principle:-
+    ---------------- 
+       1. defining the value. 
+                the first principle involves identifying what customer 
+             values the most. 
+                understand the customer needs and helps the orginization 
+             to provide the required services what customer needs acutally.           
+
+        2.Eliminate the waste:- 
+                  -> waste reduction,
+                  -> unnecessary features should be removed        
+        
+        3.continious improvement:- 
+              -> quality should be improved. 
+              -> outcomes should be improved.
+        
+        4. team colloboration:- 
+                -> difference team member collobrates, 
+                -> team member can take decesion, identify any issues,. 
+
+=============================================================================

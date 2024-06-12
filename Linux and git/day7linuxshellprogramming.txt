@@ -269,10 +269,58 @@ loops:-
 
 
 ===================================================================
+function:-
+-----------
+   -> It is block of code, 
+   -> which can defined and can be call. 
 
+    $1 --> first argument 
+    $2 --> second arguument 
+    .........
 
+    $@  --> n number of argument
+    $*  ---> n number of argument  
+    $?  --> last command executed return value will be capture 
 
+assignment 1:-
+------------ 
+   create function which takes file name as argument and return 
+   number of lines presents in the file.
+    
+    wc Command Syntax
+wc -l – Prints the number of lines in a file.
+wc -w – prints the number of words in a file.
+wc -c – Displays the count of bytes in a file.
+wc -m – prints the count of characters from a file.
+wc -L – prints only the length of the longest line in a file.
 
+==================================================================
+for item in 1 2 3 4 
+
+for file in directory/*
+
+===============================================================
+task2 :-
+-----------
+  display all the file in the directory.
+===============================================================
+file operator:-
+------------------ 
+    >   --> overwrites.
+    >>  ---> appends the data.
+=============================================================
+array:-
+--------
+    ->collection of values,
+    ->In array the elements are store in index.
+
+=================================================================
+
+Assignment 1: Ensure the script checks if a specific file (e.g., myfile.txt) exists in the current directory. If it exists, print "File exists", otherwise print "File not found".
+
+Assignment 2: Write a script that reads numbers from the user until they enter '0'. The script should also print whether each number is odd or even.
+
+Assignment 3: Create a function that takes a filename as an argument and prints the number of lines in the file. Call this function from your script with different filenames
 
 
 

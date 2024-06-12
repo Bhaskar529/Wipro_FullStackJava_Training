@@ -1,0 +1,349 @@
+database:-
+----------  
+  
+application architecture:-
+--------------------------
+frontend: user interface (forms,checkbox)
+backend: business logic (check ticket/balance is availabe or not)
+database: permanent storage, we can store the data.  
+
+data:-
+------- 
+   information. 
+   It can be any information 
+
+   eg:-
+   ---- 
+       train info 
+       employee info 
+       (raw data)
+
+database:-
+----------
+   -> It is a software for storing the information.
+   
+   eg:-
+   ----
+       train database:-
+       --------------- 
+         It contains the information about train,
+
+         train information
+         passenger information
+         station information
+         schedule information
+
+       employee database:-
+       ------------------- 
+          employeepersonaldetails 
+          address information 
+          qualification information
+
+    ->It is collection of similar information. 
+       eg:-
+       ---- 
+         police database --> crime info 
+         bank   -----------> account info, customer info,transaction info,...
+
+
+DBMS:-
+------- 
+   -> Database management System.
+
+   storing the data in the system,where database operation like 
+   insertion, updation,deletion and reterival of the of data can 
+   be effectively performed. 
+
+   adv:-
+   ----- 
+      ->It is provides security (It has authentication).
+      ->database backup.
+      ->multiple user access.
+      ->It can manage the transaction. (ACID property)
+
+RDBMS:-
+---------
+   ->Relational Database Management System.
+
+   ->In RDBMS, the records are stored in the form of tables,
+   and the tables will have some kind of relationship.
+
+   -> some of the rdbms database software
+       mysql, oracle, postgres sql,,.........
+
+
+===================================================================
+difference between sql and mysql...?
+------------------------------------
+sql                     mysql
+--------------       ----------------------
+It is query language         It is a database software
+
+Note:-
+------ 
+    Sql is Query language, 
+
+    by using sql query language, 
+                    ---> we can interact with database 
+                                               eg:-
+                                               ---  mysql 
+                                                    oracle 
+                                                    sql server
+
+
+===============================================================
+Table:-
+--------- 
+   -> It is a entity or object.
+   -> the entity will have its attribute.
+
+   eg:-
+   ----- 
+      Employee 
+      Product 
+      Customer 
+
+     employee   --------------> entity/object/table
+     ----------- 
+    id   name     dept   salary  age    ---> attribute/column.
+     1   sachin    hr    2000     24    ----> record
+     2   manas     dev   4000     20    -----> record 
+     3   rahul     tester 6000    26  
+       (structure) 
+
+  ->Entity relationship:-
+    -------------------- 
+       tables will have some kind of relationship with other table. 
+
+    difference types of relationship.
+    ---------------------------------
+    1:1  --> user & passport
+             employee & employeedeatils (education, pan, aadhar,)
+    1:m  -->  
+               dept & employee 
+               books & page 
+               cart & items 
+               user & contact no 
+               user & address
+    m:1  -->  employee & dept
+    
+    
+    m:m   -->  customer & product  
+               student & course 
+==============================================================
+ER-digram:-
+------------   
+    ->It describe the structure of the database with the help of diagram.
+
+    It has symbols, 
+        entity       
+        attribute   
+===============================================================        
+Normilization:-
+-----------------
+   ->It is a process which is used to organize the data which removes 
+   data redundancy and dependency. 
+        (or)
+     It removes the data duplications,    
+
+   eg:-
+   ---- 
+      without Normilization. 
+
+      employee
+      -----------
+      id   name  age  salary  deptid   deptname   manager 
+       1   sachin 30   40000    100       hr       sumit  
+       2   ravi   27   50000    100       hr       sumit
+       3   sourab 31   45000    100       hr       sumit 
+       4   manas  32   46000    101       developer raj 
+
+       all the information is stored in a single table,
+
+       we have 3 problems from the above table, 
+                         insert anamoly 
+                         update anamoly 
+                         delete anamoly
+
+       insert problem:- to add a employee info, we also have to add dept info. 
+                        [to add a piece of information, we have to add extra information]
+
+       update problem: to update manager name, it will take update for multiple.
+
+       delete problem: when we delete the employee, it will delete dept also,
+                       when all the employee are deleted, then there is no 
+                       dept exists.
+
+
+solution:-
+----------- 
+   By using normilization, the above table is breakdown into small table.
+
+    eg:-
+    ----
+       employee                            dept
+       ----------------                -----------------
+       id  name  age salary  deptid       deptid   name   manager 
+        1  sachin 30  20000    100         100      hr     sumit 
+        2   ravi  23  4000     100 
+        3   kumar 24  60000    100
+      (p.k)                   (f.k)         (p.k)         
+
+rules:-
+-------- 
+1nf: 
+2nf: 
+3nf: 
+bcnf:
+-------------------------------------------------------------
+what is SQL...?
+    -> It is a query language,By using sql we can interact 
+       database software.
+    -> learning is easy like english language. 
+    -> the Initial name of SQL is SEQUEL  (Structure English Query language)  
+    -> It is command based language, Every command has a meaning to the compiler.
+          english 
+          -------- 
+           go 
+           come 
+           no 
+
+          sql
+          ----- 
+          create 
+          delete
+          drop 
+          select 
+
+======================================================================
+SQL Sub Language:-
+-----------------------
+DDL 
+DML 
+DQL
+TCL 
+DCL 
+
+DDL:-  Data Definition Language
+-------
+    -> The DDL commands are related to the table structure.
+
+
+    dr.cat 
+
+    d-drop  
+    r-rename 
+    c-create   
+    a-alter 
+    t-truncate 
+
+create:-
+--------- 
+    create table table_name
+    (
+        column1  datatype,
+        column2 datatype,
+        .....
+    )
+ 
+describe:-
+-------------
+    describe / desc 
+      It will display the table structure. 
+        like column name, 
+              data type, 
+             weather it will allow null or not.
+
+     syntax:-
+     ------------
+        describe table_name        
+
+drop:-
+------- 
+   drop table table_name;
+
+
+rename:-
+--------- 
+   It is used to rename table name.
+      eg:-
+      ---- 
+        rename    odltablename to newtablename;
+         rename      employee to emp;
+
+
+alter:-
+-------- 
+  -> It is used to modify the table structure.
+      By using alter we can do 4 different operation,
+
+      alter add.  --> adds the new column
+      alter drop. -->remove the column
+      alter rename. --> it will rename the column name
+      alter modify.  -->change the datatype or size
+
+truncate:-
+------------
+     It will all the records from the table, but table structure remains.
+=======================================================================     
+DML:-
+------- 
+   Data Manipulation language
+   
+   Insert -> It is used to insert a new row. (new record)
+   update ->It is used to updated the existing row. (modify the record)
+   delete ->It is used to delete the record.
+
+DQL:-
+------ 
+    Data Query Language. 
+
+    select - It is used to reterive the data from the data. 
+    
+    syntax:-
+    ---------
+       select column1,column2,...column n from table_name;
+
+=======================================================================
+difference bewteen delete, truncate, drop
+
+drop -> table structure + records 
+truncate -> all the records will be deleted
+delete -> one or more or all the records will be delete [we can give condition]
+===========================================================================
+  DQL:-
+  ------- 
+       select  
+
+       (concepts)
+      1.operators
+      2.sql clauses. 
+      3.joins 
+      4.sub queries
+      5. functions
+---------------------------------------------------------------------------
+operators:-
+------------- 
+   arithmetic  -> +, -, * , %,....
+   comparison  -> >, < , >= , <= , == , !=
+   logical     -> 
+                   and 
+                    or 
+                    like 
+                    between 
+                    in 
+                    any 
+                    all
+
+===========================================================
+Sql clauses:-
+-------------- 
+   1.where clause.
+   2.order by clause.
+   3.group by clause. 
+   4.having clause.
+
+1. where clause:-
+----------------- 
+   it is used to filter the records based on given condition.
+

@@ -1,0 +1,43 @@
+select * from employee1;
+
+select * from employee1 order by age;
+
+select id,name,age from employee1 order by age asc; 
+
+select id,name,age from employee1 order by age desc;
+
+
+
+select * from employee;
+select dept from employee group by dept;
+
+select dept,count(*) from employee group by dept;
+
+select sum(salary), min(salary), max(salary) from employee;
+
+select count(id) from employee;
+
+select dept, count(id), sum(salary), min(salary), avg(salary) from employee group by dept;
+
+select dept,sum(salary) as total_salary from employee group by dept;
+
+select dept, max(salary) from employee group by dept order by max(salary) desc;
+
+select dept, count(*) from employee group by dept order by count(*) desc;
+
+select * from employee;
+insert into employee values(8,'varunsingla',82000,31,'developer');
+
+update employee set dept='development' where id=6;
+
+select dept, count(id) from employee group by dept having count(id)>1 order by count(id) desc;
+
+select dept, count(id) from employee where dept!='hr' group by dept having count(id)>1 order by count(id) desc;
+
+select dept, min(salary) from employee group by dept having min(salary)<40000  order by min(salary) asc;
+
+
+
+
+
+

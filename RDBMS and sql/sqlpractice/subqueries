@@ -1,0 +1,24 @@
+select * from employee;
+
+select * from employee where salary>50000;
+
+select * from employee where salary>
+(select salary from employee where name='ravi');
+
+select * from employee where salary >
+ any (select salary from employee where dept='development') and dept!='development';
+
+select * from employee where salary >
+ all (select salary from employee where dept='development') and dept!='development';
+
+select salary from employee where name='mohit';
+
+select * from employee;
+select * from employee where id=1;
+select * from employee where id in (1,2,3,8,9,10,11);
+select * from employee where id not in (1,2,3,8,9);
+
+select * from employee where id > any(4,6,7);
+
+select * from employee where id > all(4,6,7);
+

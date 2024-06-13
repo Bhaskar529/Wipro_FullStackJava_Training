@@ -1,0 +1,40 @@
+select * from emp;
+select * from dept;
+
+select * from emp 
+inner join 
+dept
+on emp.deptid=dept.id
+
+
+select * from emp
+left outer join
+dept
+on emp.deptid=dept.id;
+
+select * from emp
+right outer join 
+dept
+on emp.deptid=dept.id;
+
+select * from emp 
+full outer join 
+dept
+on emp.deptid=dept.id;
+
+select e.id,e.name,e.age,d.name,d.manager
+from emp e
+inner join
+dept d
+on e.deptid=d.id
+where e.salary>40000
+order by e.salary desc;
+
+select * from emp
+cross join 
+dept;
+
+
+
+
+

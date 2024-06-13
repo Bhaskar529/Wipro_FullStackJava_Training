@@ -1,0 +1,40 @@
+describe employee;
+drop table employee;
+
+create table employee1
+(
+id number(10),
+name varchar2(30),
+salary number(10,2),
+dept varchar2(30),
+age int
+);
+
+desc employee1;
+
+insert into employee1 values(1,'ravi',40000,'hr',25);
+insert into employee1 values(5,'ram',85000,'development',28);
+insert into employee1 (id,name,age)values (3,'bob',30);
+
+select * from employee1;
+select id,name from employee1;
+select id,name,salary,dept,age from employee1;
+
+update employee1 set salary=35000,dept='hr' where id=3;
+
+delete from employee1 where id=1 and salary=50000;
+delete from employee1 where id=3;
+
+alter table employee1 drop (dept);
+
+select id,name,salary,salary+1000 as bonus, salary/30 as perdaysalary from employee1;
+select * from employee1 where age>25;
+
+alter table employee1 add dept varchar2(10);
+select * from employee1;
+insert into employee1(dept) values('hr');
+delete from employee1 where dept='hr';
+
+update employee1 set age=29 where id=5;
+update employee1 set dept='hr' where id=5;
+alter table employee1 modify dept varchar2(30);

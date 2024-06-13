@@ -1,0 +1,344 @@
+Sql clauses:-
+-------------- 
+   1.where clause.
+   2.order by clause.
+   3.group by clause. 
+   4.having clause.
+
+1. where clause:-
+----------------- 
+   it is used to filter the records based on given condition.
+       
+       where salary > 50000
+       where age <35 
+       where dept = 'hr' and salary > 40000
+
+2.order by clause:-
+------------------   
+   ->It is used to sort the records based on the column condition.
+
+     select * from employee order by salary 
+                            order by age 
+                            order by name 
+
+     -> by default it will sort in ascending order. 
+
+           keywords:-
+           ----------
+             asc  --> ascending order.
+             desc --> descending order.                       
+===================================================================
+SQL Functions:-
+----------------- 
+   2 types of functions. 
+   --------------------- 
+       1. scalar function. --> It takes single row as a input, 
+                                and gives the output.
+
+                                eg:-
+                                ----
+                                 id   name     upper(name)
+                                 -----------
+                                  1    raj       RAJ 
+                                  2    bob       BOB 
+                                  3    suraj     SURAJ 
+       
+       2. aggregate function. -->It takes multiple row as input, 
+                                 and give single row as a output.
+
+                               eg:-
+                               ---- 
+                                 id   name  salary 
+                                  1    raj   1000
+                                  2    bob   3000 
+                                  3    kumar 2000 
+
+                                                   sum(salary) --> 6000 
+                                                   min (salary) --> 1000 
+                                                   max(salary) --> 3000 
+                                                   count(salary) --> 3
+                                                   avg(salary) --> 2000
+
+
+=================================================================
+3.Group by clauses.
+      we can make similar records into a group. 
+
+      eg:-
+      ----- 
+         suppose we have 50 employee records, 
+           based on gender --> we can group
+           based on skill set --> we can group 
+           based on dept  --> we can group.  
+
+   Note:-
+   ------ 
+       --> select columnname1, columnname2,....from  tablename
+       
+        salary    -----> normal column
+        sum(salary) -->  aggregate column
+       
+       -> while performing group by we can only call aggregate column.
+
+  task:-
+  ------ 
+   ->display count of employee in each dept, and display the count in 
+    descending order.     
+
+
+Having Clause:-
+----------------
+    -> It is used to filter the group by result.
+      eg:-
+      ---- 
+          in group by we have aggregate column, 
+
+          having count(id)>1 
+          having sum(salary)>200000
+
+
+ task:-
+ ------- 
+    -> display dept wise minimum salary and show only minimum salary 
+     should be < 40000 and sort the minimum salary in order.   
+
+========================================================================
+Sql constraint:-
+----------------- 
+   -> Applying condition to the table. 
+       
+       SQL constraint ==> Enter only valid data. 
+
+   -> different types of constraint. 
+         1. primary key constraint 
+         2. not null. 
+         3. unique constraint. 
+         4. default constraint.
+         5. check constraint. 
+         6. foreign key constraint. 
+
+
+primary key constraint:-
+-----------------------
+    ->It uniquely identifies the record in the table.
+    ->It cannot be null.
+    ->There should be only one primary key in a table.
+
+      eg:-
+      ---- 
+         employee 
+         --------
+         id     name     salary    age   emailid    passportNo   mobileNo
+         (p.k)
+
+Not Null constraint:-
+---------------------- 
+    ->The value of the column cannot be null.
+         
+         name 
+         -----
+         ravi 
+         sourab 
+         null     ---> It cannot be null,  (error)
+
+
+unique key constraint:-
+-----------------------
+    ->It has only unique value. (It will not allow duplicate).
+    ->It will allow null values.
+    ->There can be one or more unique key column in a table. 
+
+
+    eg:-
+    ------
+     employee 
+     -----------
+        id     name      dept    salary     emailid       passportNo 
+        |                                     |               |
+       (p.k)                                 (unique key)   (unique key)
+      [no null values]                     [allow null values] 
+
+
+default constraint:-
+---------------------
+ If we did not provide any value,it will insert the default value. 
+   
+   dept:    (default : trainee)
+ ----------
+   hr 
+   developer 
+   trainee     (if we did not provide any value, it will take as default value)
+
+check constraint:-
+  ------------------
+     Before inserting it will check with some condition 
+         check (salary>20000)
+         check(age>22)
+   
+foreign key:-
+---------------
+    By using foreign key, it will establish a relationship with the 
+    other table.
+
+    rules:-
+    --------
+       ->It is a primary key of other table.
+       ->It will allow duplicate.
+       ->It can be null.
+
+   dept:                           Employee
+   -------                         ---------------------
+   id     name      manager         id     name     age  salary  deptid
+   100     hr         sumit          1    sachin    30    45000    101
+   101    developer   raj            2    rahul     32    50000    101
+   (p.k)                            (p.k)                          (f.k)
+
+
+    
+   
+   foreign key on delete:-
+   -----------------------
+        By default foreign will not deleted, we have to set the property.
+       on delete cascade.  -->
+       on delete set null.  -->if we delete the parent record, child record 
+                                value will be set to null.
+
+how to apply the constraint:-
+------------------------------
+    1. column level constraint
+    2. table level constraint
+
+1.column level constraint:-
+--------------------------- 
+     declaring the constraint immediately after the column name.
+
+2.table level constaint:- 
+------------------------- 
+     declaring the constraint after declaring all the columns. 
+        (or)
+     table already create later we can alter it.      
+
+========================================================================
+Like operator:-
+--------------- 
+   -> It is used to search the pattern. 
+   -> It has 2 operators 
+                1. underscore (_). 
+                2. percentage (%).   
+    
+    underscore (_):-
+    ------------------
+        It represents exactly one character.
+
+    percentage(%):-
+    ---------------- 
+         It represents zero, one or more character. 
+
+         's%'   --> name starts with s. 
+         '%s'   --->name ends with s.
+         '_a%'   ---> second letter should be a
+
+=====================================================================
+sub queries:-
+-------------
+  ->It is nothing but query inside another query.
+       (or)
+   -> nested query.
+
+   when to use sub query...?
+   --------------------------
+       for complex query.
+      qst:- find all the employee whose salary is greater than rohit salary.
+           
+            select * from employee where salary > (find rohit salary)
+                        |                               |
+                      query 1                       query 2      
+
+
+   syntax:-
+   -------- 
+       outer query ---->  second execution
+       (
+         inner query() --> first execution
+       )
+   
+     -> first it will execute the inner query, the output of inner
+     query is used by outer query.
+
+
+  types of subquery:-
+  --------------------
+      1. single row sub query.
+      2. multi row sub query.
+
+       1. single row subquery:-
+       ------------------------
+        -> the inner query returns the result as single row. 
+           eg:-
+           ------ 
+              display all the employee whose salary is greater than 
+              rohit salary
+
+       2. multi row sub query:-
+       ------------------------- 
+         ->the inner query returns the result as multiple row.
+            eg:-
+            ----
+              display all the employee whose salary is greater than 
+              all the developer salary.
+
+       for multirow subquery use this operator:-
+       ---------------------------------------- 
+           in -->  in means equal to
+           any  --> any one
+           all  --> every one
+
+
+
+===================================================================
+SQL joins:-
+------------
+ -> By using join we can able to reterive the data from 
+  different tables.
+     -->inner join 
+     -> outer join 
+               ---> left outer join 
+               ---> right outer join 
+               ---> full outer 
+      -->cross join          
+
+ -> to join the table, there should be a common column in 
+    both the table.
+       eg:-
+       ---- 
+          dept                      emp 
+          ----------               ----------------
+          id   name   manager         id    name   salary age deptid  
+
+             |                                                     |
+             id -------                                        deptid 
+
+     eg:-
+     ---- 
+        in the above case deptid is common column.It is a foreign key.
+    
+    ON keyword:-
+    ------------- 
+      It is used give the join column condition.
+
+=========================================================================
+Set operator:-
+--------------- 
+     ---> It is used to combine the result of two queries.
+  
+   union       
+   union all   
+   interset 
+   minus
+
+--------------------------------------------------------
+
+
+
+
+

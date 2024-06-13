@@ -1,0 +1,33 @@
+create table dept
+(
+id number(10) primary key,
+name varchar2(30) not null,
+manager varchar2(30)
+);
+
+insert into dept values(102,'admin','mohan');
+select * from dept;
+
+
+create table emp
+(
+id number(10) primary key,
+name varchar2(30),
+age number(10),
+salary number(10),
+deptid number(10),
+constraint fk1 foreign key(deptid) references dept(id) on delete set null
+);
+
+desc emp;
+select * from emp;
+select * from dept;
+insert into emp values(4,'varun',23,52000,102);
+drop table emp;
+
+delete from emp where id=1;
+delete from dept where id=100;
+
+
+
+

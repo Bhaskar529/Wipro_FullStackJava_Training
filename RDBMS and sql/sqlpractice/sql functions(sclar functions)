@@ -1,0 +1,18 @@
+select * from employee;
+
+select round(100.234) from dual;
+--gives 100
+select round(100.567) from dual;
+--gives 101
+
+select id,name,salary,salary/30 from employee;
+select id,name,salary,round(salary/30),round(salary/30,2) from employee;
+
+select trunc(200.8567,2) from dual;
+-- gives 200.85
+
+select trunc(200.43354) from dual;
+--gives 200
+
+select mod(3,2) from dual;
+select mod(3,3) from dual;

@@ -1,0 +1,13 @@
+create sequence empidsequence
+start with 1000
+increment by 1
+
+create table emp12(
+id number(10),
+name varchar2(30),
+dept varchar2(30),
+salary number(20)
+);
+
+insert into emp12 values(empidsequence.nextval,'sachin','hr',32000);
+select * from emp12;

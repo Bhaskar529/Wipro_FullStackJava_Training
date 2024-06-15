@@ -1,0 +1,43 @@
+select * from employee;
+
+--date operaion
+-------------------
+alter table employee add (dob date);
+
+update employee  set dob='28-august-1998' where id=8;
+
+select sysdate from dual;
+select sysdate+1 from dual;
+select sysdate-1 from dual;
+
+select id,name,dob from employee;
+select id,name,dob ,(sysdate-dob) from employee;
+select id,name,dob,round((sysdate-dob)) from employee;
+select id,name,dob,round((sysdate-dob)/365) as year from employee;
+select id,name,dob,round((sysdate-dob)/365) as year from employee order by year desc;
+
+
+select id,name,dob,months_between(sysdate,dob) from employee;
+select id,name,dob,round(months_between(sysdate,dob)) from employee;
+
+alter table employee add (doj date);
+select * from employee;
+
+select months_between('1-mar-2024','15-jan-2024') from dual;
+
+select * from employee;
+
+select add_months(sysdate,1) from dual;
+select add_months(sysdate,2) from dual;
+select add_months('20-jan-24',3) from dual;
+
+select next_day('15-jun-24','thursday') from dual;
+select last_day('15-jun-24')from dual;
+--return last day of the month
+
+select id,name,dob, to_char(dob,'DD MM YYYY') from employee;
+select id,name,dob, to_char(dob,'DD MONTH YYYY') from employee;
+select id,name,dob, to_char(dob,'DAY MONTH YYYY') from employee;
+select id,name,dob, to_char(dob,'DAY MONTH Year') from employee;
+
+select id,name,dob, to_char(dob,'dd month yy HH MI SS') from employee;

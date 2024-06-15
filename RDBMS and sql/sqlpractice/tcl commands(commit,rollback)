@@ -1,0 +1,21 @@
+select * from employee;
+
+create table emp10
+(
+id number(10),
+name varchar2(30),
+dept varchar2(30)
+); 
+
+select * from emp10;
+insert into emp10 values(1,'raj','developer');
+commit
+insert into emp10 values(2,'sumit','hr');
+commit;
+insert into emp10 values(3,'rohit','ht');
+rollback;
+
+update emp10 set name='sumit kumer' where id=2;
+
+select * from emp10;
+rollback;

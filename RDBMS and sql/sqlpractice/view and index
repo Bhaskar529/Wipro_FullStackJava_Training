@@ -1,0 +1,18 @@
+select * from employee;
+
+create view developerview as 
+select * from employee where dept='developer';
+
+select * from developerview;
+
+create view namelist as
+select id,name,age from employee;
+
+select * from namelist;
+
+
+create index empidindex
+on employee(id);
+
+drop index empidindex;
+

@@ -1,0 +1,43 @@
+--character functions
+
+select * from employee;
+
+select id,name,concat('welcome  ',name) from employee;
+
+select concat('sachin', 'tendulkar') from dual;
+
+select id,name,concat(id,name) from employee;
+select id, name,concat('welcome',name) from employee;
+
+select id,name,length(name),substr(name,1,3) from employee;
+
+select name from employee where name='s%' and length(name)>5;
+
+select id,name, instr(name,'m') from employee;
+select id,name,instr(name,'a') from employee where instr(name,'a') <=2;
+
+select instr('sachin','s') from dual;
+
+select lpad(45000,10,'*') from dual;
+select rpad(45000,10,'*') from dual;
+select id,name,lpad(salary,10,'*') from employee;
+
+select replace('sachin','a','bbbb') from dual;
+select id,name,replace(name,'a','  ')from employee;
+select id,name,replace(name,substr(name,1,3),'***') from employee;
+
+select * from employee where name like '%s%' or name like '%a%';
+
+select id,name,upper(name), lower(name), initcap(name) from employee;
+
+select * from employee;
+select id,name,dept from employee where dept='Development';
+
+select id,name,dept from employee where upper(dept)='DEVELOPMENT';
+
+update employee set name='Raj' where id=6;
+
+select id,name,dept from employee where dept='Development';
+select id,name,dept from employee where lower(dept)='development';
+
+select * from employee where initcap(name)='Raj';

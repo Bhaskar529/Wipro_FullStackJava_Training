@@ -1,0 +1,21 @@
+select * from employee;
+
+select id,name,salary,dept,
+rank() over(order by salary)
+from employee;
+
+select id,name,salary,dept,
+dense_rank() over (order by salary)
+from employee;
+
+select id,name,salary,
+rank() over(order by salary)
+from employee;
+
+select * from (select id,name,salary,dept,
+dense_rank() over(order by salary as desc) as emprank
+from employee);
+
+
+
+

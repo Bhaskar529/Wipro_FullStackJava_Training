@@ -1,0 +1,31 @@
+select * from emp10;
+ 
+select * from employee;
+update employee set salary=56000 where id=9;
+insert into employee values(3,'siva',760000,30,'testing','26-april-1998','')
+select dept,count(name) from employee group by dept;
+select * from employee order by id;
+
+select id,name,salary,age,dept,
+count(name) over(partition by dept) from employee;
+
+select id,name,salary,age,dept,count(name) over (partition by dept),
+avg(salary) over (partition by dept) from employee;
+
+select id,name,salary,dept,
+rank() over(order by salary)
+from employee;
+
+select id,name,salary,dept,
+rank() over(partition by dept order by salary) 
+from employee;
+
+select id,name,salary,
+count(name) over(partition by dept) 
+from employee;
+
+select id,name,salary,dept,
+sum(salary) over(partition by dept)
+from employee;
+
+

@@ -1,0 +1,210 @@
+1.explain sql clauses,
+2.hat is like operator 
+3.what is in any all opeartor
+4.explain sub queries.
+5.explain sql joins.
+6.why we need normilization...?
+7.what is sql constraints...?
+8.what is primary key..?
+9.difference between primary key and unique key..?
+10.explain foreign key...?
+
+
+SQL functions.
+-------------------
+two types of functions.
+   1. scalar function.
+   2. aggregate function.
+
+1.scalar function:-
+------------------- 
+    ->for every row it gives a output.
+       3 types of scalar function. 
+            1.numeric function.   --->round, trunc,mod
+            2.character function. 
+            3.date functions.
+
+   1.numeric function:-
+   ---------------------
+      round --> It will round off specified decimal
+      trunc  --> It will truncate the value.
+      mod   --> It will the remainder value.
+
+    2.character function:-
+    ----------------------  
+     concat   
+     substr 
+     length 
+     instr
+     lpad 
+     rpad 
+     replace
+
+     upper 
+     lower
+     initcap
+
+     task:-
+     -------- 
+      ->  write a sql query to find the names start with s and its length should 
+        be 5 character.
+
+     -> display all t he employee recordswho has a and s in there name.   
+             eg:-
+             --- sachin
+             --- manas 
+              --roshan 
+
+==============================================
+Number   ---> numeric values
+varchar2 ---> alpha numeric , It should be enclosed in single quote
+date      ---> to store the data , It should be enclosed in single quote
+
+==========================
+Date functions:-
+------------------
+   -> It used perform calculations on date. 
+
+   Default date format:-
+   ---------------------- 
+          20-jan-22
+          23 -feb-  20 
+          |   |      |
+         day  month  year 
+
+   to find the current data:-
+   -----------------------------
+    sysdate      
+
+   arithmetic operation:-
+   ----------------------- 
+     date + 1 => add 1 day to the date 
+     date + 5 => add 5 days to the date 
+     date - 1 => substract 1 day
+     date1-date2 => no of days   
+
+   functions:-
+   -----------
+     months_between(date1,date2)  => It returns the months, bewteen the two date.
+     addmonths('15-jun-2024',1) => It will add months with the date.
+     next_day('15-jun-2024','monday') --> returns the date 
+     last_day('10-jan-24')   ---> display the last date of that month. 
+
+    Date format:-
+    -------------- 
+       to_char(dob, 'MM /YYYY') 
+
+          YYYY - full year 
+          year 
+          dd 
+          DAy 
+
+=================================================================
+ACID:-
+------- 
+  ->Atomoticity
+
+
+================================================================
+TCL:-
+------- 
+   Transaction Control Language. 
+     commit  
+     rollback 
+ 
+ what is Transaction..?
+ ---------------------- 
+     --> It is a set of sql statement , which is executed to perform 
+     some task. 
+         
+         eg:-
+         ----- 
+             in car you want to go from bangalore to chennai. 
+
+                  --> start the car 
+                  --> full the fuel 
+                  --> check the air 
+                  --> drive the car 
+
+            -> if we are going to chennai, then the above step is ok.      
+      Note:-
+      -------- 
+         if you are going then do all the steps, if not then don't do 
+         any steps.  
+
+
+commit and rollback:-
+--------------------- 
+ commit => permanent saved, once we commit later it cannot be modified.
+ rollback => if Transaction fails, we can rollback to last commited state.
+
+
+Note:-
+------ 
+   By default autocommit is enabled, what ever we save, it will save 
+   permanently.
+
+   we can disable the auto-commit, 
+
+ eg:-
+ ----- 
+          person 1                            person 2       
+       
+       ->bal 5000                                ->bal 7000
+         transferamt 1000
+        
+        bal=bal-transferamt                       bal=bal+transferamt
+        bal=4000      ----------------------------->  bal 8000
+                                                        ||
+                                                        ||
+                                                      successfull   
+========================================================================
+SQL windows functions:-
+-------------------------  
+     Over clause --> It is used in window functions, 
+
+     for performing window functions we can use,
+               1. aggreagte functions. --> count, sum,avg
+               2. ranking functions.  --> rank, dense rank 
+                                    
+    Note:-
+    -------
+        while calling ranking functions, always use order by clause. 
+
+
+ rank()      --------->It generates a rank with gap
+ dense_rank()  -------> It generates a rankwithout gap.                             
+
+ =======================================================================
+view:-
+-------
+   -> It is a virtual table.
+
+   syntax:-
+   ---------
+     create view viewname as select stmt
+
+======================================================================
+index:-
+--------- 
+   -> Index is used to reterive the data faster.
+   -> we can't see the index, It internally helps to improve the perfromance.
+   -> for frequenlty searhed columns, we can make it as index. 
+
+=======================================================================
+Auto-increment:-
+-----------------  
+     flipkart    ----------------->order id
+     online transaction  ---------> transaction id 
+     employee           ----------> empid   
+
+  mysql --> autoincrement 
+  oracel ---> sequence    
+
+  =====================================================
+
+
+
+
+
+

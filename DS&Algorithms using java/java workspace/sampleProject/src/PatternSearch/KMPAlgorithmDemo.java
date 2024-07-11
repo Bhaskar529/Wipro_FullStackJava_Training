@@ -1,5 +1,5 @@
 package PatternSearch;
-
+//Time complexity = 0(m+n)best
 public class KMPAlgorithmDemo {
 
 	private final int R;

@@ -1,5 +1,6 @@
 package PatternSearch;
-
+//Time complexity = o(n)Average,best
+				// o(mn)worst
 import java.util.Arrays;
 
 public class BoyerMooreDemo {

@@ -1,5 +1,5 @@
 package PatternSearch;
-
+//Time complexity o(m+n) best,average
 public class RabinKarpAlgorithm {
     private final int d=256;
     private final int q=101;

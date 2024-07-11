@@ -1,5 +1,5 @@
 package PatternSearch;
-
+// Time complexity = 0(m*n)worst case
 public class NaivePatternSearch {
 
 	static void search(String text,String pattern) {

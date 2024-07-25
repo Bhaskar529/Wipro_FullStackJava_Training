@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+
+</head>
+
+<body>
+    <center>
+        <h2>Simple Calculator</h2><br>
+
+        <form id="myform">
+            <label>Enter number 1</label>
+            <input type="number" id="number1" name="inputfield1" placeholder="enter first number">
+            <br><br>
+            <label>Enter number 2</label>
+            <input type="number" id="number2" name="inputfield2" placeholder="enter second number">
+        </form>
+        <br>
+        <div id="result"></div>
+        <!--<p id="result"></p>-->
+        <br><br>
+        <button  class="calculation" id="add" onclick="addition()">Add</button>
+        &nbsp;
+        <button class="calculation" id="sub" onclick="subtraction()">subtract</button>
+        &nbsp;
+        <button class="calculation" id="mul" onclick="multiplication()">multiply</button>
+        &nbsp;
+        <button class="calculation" id="div" onclick="division()">division</button>
+        <br><br>
+        <button class="calculation" id="reset" onclick="clearinputfield()">reset</button>
+
+
+    </center>
+
+
+    <script src="../js/calculator.js"></script>
+</body>
+
+</html>

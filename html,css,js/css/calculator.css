@@ -1,0 +1,18 @@
+h2{
+    color:red;
+}
+#add{
+    background-color: peachpuff;
+}
+#sub{
+    background-color: violet;
+}
+#mul{
+    background-color: chocolate;
+}
+#div{
+    background-color: yellow;
+}
+body{
+    background-image: url("../images/calculator.jpg");
+}

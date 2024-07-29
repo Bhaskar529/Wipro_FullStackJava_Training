@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Date is a built-in Javascript object-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Example: The Date object</title>
+ 
+</head>
+<body>
+   <p> Today is: </p>
+
+   <script>
+    var day  = new Date().getDay();        // current date/time
+    switch(day){
+        case 0: document.writeln("Sunday"); break;
+        case 1: document.writeln("Monday"); break;
+        case 2: document.writeln("Tuesday"); break;
+        case 3: document.writeln("Wednesday"); break;
+        case 4: document.writeln("Thursday"); break;
+        case 5: document.writeln("Friday"); break;
+        case 6: document.writeln("Saturday"); break;
+    }
+</script>
+</body>
+</html>

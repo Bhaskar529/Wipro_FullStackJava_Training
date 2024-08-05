@@ -1,0 +1,71 @@
+package com.springREST.controller;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springREST.data.Employee;
+
+@RestController	//Spring REST
+public class EmployeeController {
+	
+	@GetMapping("/")
+	public String sayHello() {
+		return "Welcome to Spring REST";
+	}
+	@GetMapping("/v1/hello")
+	public String hello() {
+		return "This is V1 of hello";
+	}
+	
+
+	@GetMapping("/v2/hello")
+	public String hellov2() {
+		return "This is V2 of hello";
+	}
+	
+	@GetMapping("/login")
+	public String login(@RequestParam String UID, @RequestParam String PWD) {
+	System.out.println("Given data is : UserId :"+UID+" Password :"+PWD);
+		
+		if(UID.equalsIgnoreCase("user") && PWD.equalsIgnoreCase("admin"))
+			return "You are a valid user";
+		else
+			return "Invalid username or password. Please check your credentials";
+	}
+	
+	@PostMapping("/insertData")
+	public String insertData(@RequestBody Employee emp) {
+		System.out.println("Received data is :"+emp);
+		return "Given record is inserted in the database successfully";
+	}
+	
+	@PutMapping("/updateData")
+	public String updateData(@RequestBody Employee emp) {
+		System.out.println("Given data to update is :"+emp);
+		return "Given record is updated in the db successfully....";
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String deleteData(@PathVariable int id) {
+		System.out.println("Given id to delete is :"+id);
+		return "Given record with id :"+id+" is deleted successfully";
+	}
+	
+	
+	@GetMapping("/sum_Average")
+	public String sumAverage(@RequestParam float num1,@RequestParam float num2,
+			@RequestParam float num3) {
+		float sum=num1+num2+num3;
+		float avg=sum/3;
+		return "Sum of "+num1+" ,"+num2+", "+num3+" is : "+sum+"\n \nAverage is :"+avg;
+	}
+	
+	
+	
+}

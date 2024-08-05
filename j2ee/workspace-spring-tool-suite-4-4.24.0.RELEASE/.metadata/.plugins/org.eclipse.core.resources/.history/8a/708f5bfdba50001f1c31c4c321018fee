@@ -1,0 +1,5 @@
+package com.springJPA.controller;
+
+public class StudentController {
+
+}

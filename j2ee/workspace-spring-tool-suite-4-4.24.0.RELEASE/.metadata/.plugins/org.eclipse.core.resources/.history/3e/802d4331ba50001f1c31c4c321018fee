@@ -1,0 +1,5 @@
+package com.springJPA.repository;
+
+public interface IStuRepositoty extends JpaRepositoyt<Student,Integer>{
+
+}

@@ -1,0 +1,5 @@
+ackage com.springREST.controller;
+
+public class StudentController {
+
+}

@@ -1,0 +1,13 @@
+package com.hibernate;
+
+
+
+public class HIbernate_CURD_Operations {
+		
+	private static SessionFactory factory;
+	
+	//obtains the session factory
+	public static void getSessionFactory() {
+		
+	}
+}

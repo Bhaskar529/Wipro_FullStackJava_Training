@@ -1,0 +1,6 @@
+package com.springJPA.controller;
+
+@RestController
+public class StudentController {
+
+}

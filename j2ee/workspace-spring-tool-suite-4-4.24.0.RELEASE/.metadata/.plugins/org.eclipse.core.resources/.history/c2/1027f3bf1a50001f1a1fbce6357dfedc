@@ -1,0 +1,12 @@
+package com.springREST.controller;
+
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+public class salary {
+	
+	@GetMapping("/salary")
+	public String salary(@RequestParams int basic,@RequestParams int da,@RequestParams deduct) {
+		
+	}
+}

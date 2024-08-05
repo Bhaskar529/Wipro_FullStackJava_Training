@@ -1,0 +1,50 @@
+package com.springJPA.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springJPA.data.Employee;
+import com.springJPA.repository.IEmpRepository;
+
+@Controller
+public class EmployeeController {
+	
+	@Autowired
+	IEmpRepository empRepo;
+	
+	@GetMapping("/getAllRecords")
+	public List<Employee> getAllRecords(){
+		List<Employee> empList=empRepo.findAll();
+		return empList;
+	}
+	
+	@PostMapping("/insertData")
+	public String insertDate(@RequestBody Employee employee) {
+		System.out.println("Received data is : "+employee);
+		empRepo.save(employee);
+		return "Given record is inserted in the database successfully...";
+	}
+	
+	@PutMapping("/updateData")
+	public String   updateData(@RequestBody Employee emp) {
+		System.out.println("Given data to update is : "+emp);
+		empRepo.save(emp);
+		return "Given record is updated in the db successfully...";
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String deleteData(@PathVariable int id) {
+		System.out.println("Given id to delete is : "+id);
+		empRepo.deleteById(id);
+		return "Given record with id : "+id +" is deleted successfully";
+		
+	}
+}

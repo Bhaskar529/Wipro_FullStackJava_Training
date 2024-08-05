@@ -1,0 +1,29 @@
+package com.hibernate;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+public class Hibernate_CURD_Operations {
+		
+	private static SessionFactory factory;
+	
+	//obtains the session factory
+	public static void getSessionFactory() {
+		try {
+			Configuration conf = new Configuration().configure();
+			StandardServiceRegistryBuilder builder=new StandardServiceRegistryBuilder()
+					.applySettings(conf.getProperties());
+			factory=conf.buildSessionFactory(builder.build());
+		}
+		catch(Throwable ex) {
+			System.out.println("Exception is: "+ex);
+		}
+	}
+	
+	public static void main(String args[]) {
+		getSessionFactory();
+		Hibernate_CURD_Operations obj=new Hibernate_CURD_Operations();
+		
+	}
+}

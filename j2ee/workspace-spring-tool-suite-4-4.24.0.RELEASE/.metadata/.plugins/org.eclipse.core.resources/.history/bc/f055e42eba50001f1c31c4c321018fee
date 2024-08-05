@@ -1,0 +1,5 @@
+package com.springJPA.data;
+
+public class Sudent {
+
+}

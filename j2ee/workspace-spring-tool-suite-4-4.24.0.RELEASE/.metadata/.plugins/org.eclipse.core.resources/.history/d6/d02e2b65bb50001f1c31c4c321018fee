@@ -1,0 +1,9 @@
+package com.springJPA.controller;
+
+@RestController
+public class StudentController {
+	
+	@Autowired
+	IStuRepository stuRepo;
+	
+}

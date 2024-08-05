@@ -1,0 +1,2 @@
+spring.application.name=PAYROLL
+server.port=8082

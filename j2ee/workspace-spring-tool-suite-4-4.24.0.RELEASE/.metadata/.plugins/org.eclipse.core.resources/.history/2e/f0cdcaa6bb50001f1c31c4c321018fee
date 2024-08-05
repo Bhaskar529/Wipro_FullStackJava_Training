@@ -1,0 +1,11 @@
+package com.springJPA.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+@RestController
+public class StudentController {
+	
+	@Autowired
+	IStuRepository stuRepo;
+	
+}

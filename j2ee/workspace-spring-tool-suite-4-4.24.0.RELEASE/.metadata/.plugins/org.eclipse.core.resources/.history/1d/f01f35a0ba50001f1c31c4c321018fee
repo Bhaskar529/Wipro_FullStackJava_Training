@@ -1,0 +1,8 @@
+package com.springJPA.data;
+
+
+@Entity
+@Table ()
+public class Student {
+
+}

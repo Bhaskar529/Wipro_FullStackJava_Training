@@ -1,0 +1,28 @@
+package com.springREST.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.springREST.data.Student;
+
+public class StudentController {
+	
+	@PutMapping("/")
+	public String hello() {
+		return "Hello, Welcome to springREST";
+	}
+	
+	@PostMapping("/insertdata")
+	public String insertData(@RequestBody Student student) {
+		System.out.println("Received data is : "+student);
+		return "Given data inserted into database successfully...";
+	}
+	
+	@PutMapping("/updateData")
+	public String updateDate(@RequestBody Student student) {
+		System.out.println("Given data to update is : "+student);
+		return "Given record is updated into database successfully...";
+	}
+}

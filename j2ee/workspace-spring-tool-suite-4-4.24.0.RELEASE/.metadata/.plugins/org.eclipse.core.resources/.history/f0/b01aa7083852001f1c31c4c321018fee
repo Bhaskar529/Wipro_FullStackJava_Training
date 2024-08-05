@@ -1,0 +1,21 @@
+package com.example.demo.Controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmployeeController {
+
+	@GetMapping("/getRecords/{id}")
+	public String getRecords(@PathVariable int id) {
+		System.out.println("Given id is : "+id);
+		if(id==10)
+			return "Varun";
+		else if(id==11)
+			return "Saurabh";
+		else if(id==12)
+			return "Sai";
+		else return "Invalid Employee id";
+	}
+}

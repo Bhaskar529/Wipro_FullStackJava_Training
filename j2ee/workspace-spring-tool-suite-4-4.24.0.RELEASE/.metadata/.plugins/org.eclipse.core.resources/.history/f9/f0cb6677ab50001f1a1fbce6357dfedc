@@ -1,0 +1,14 @@
+package com.springJPA.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.springJPA.data.Employee;
+
+public class EmployeeController {
+	
+	@GetMapping("/insert")
+	public String insertDate(@RequestBody Employee employee) {
+		
+	}
+}

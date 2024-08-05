@@ -1,0 +1,4 @@
+spring.application.name=PAYROLL
+server.port=8082
+eureka.client.healthcheck.enabled=true
+eureka.client.fetch-registry=true

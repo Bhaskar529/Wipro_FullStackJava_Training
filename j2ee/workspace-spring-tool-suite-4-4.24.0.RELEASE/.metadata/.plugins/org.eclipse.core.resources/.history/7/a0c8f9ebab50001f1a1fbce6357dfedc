@@ -1,0 +1,20 @@
+package com.springJPA.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.springJPA.data.Employee;
+import com.springJPA.repository.IEmpRepository;
+
+public class EmployeeController {
+	
+	@Autowired
+	IEmpRepository empRepo;
+	
+	@GetMapping("/insert")
+	public String insertDate(@RequestBody Employee employee) {
+		System.out.println("Received data is : "+employee);
+		empRepo.save(employee);
+	}
+}

@@ -1,0 +1,11 @@
+package com.springJPA.controller;
+
+import com.springJPA.data.Employee;
+
+public class EmployeeController {
+	
+	@GetMapping("/insert")
+	public String insertDate(@RequestBody Employee employee) {
+		
+	}
+}
